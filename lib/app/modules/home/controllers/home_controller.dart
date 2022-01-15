@@ -5,10 +5,10 @@ import 'package:post_fetching_api/app/data/model/agent_model.dart';
 import 'package:post_fetching_api/app/data/services/api_manager.dart';
 
 class HomeController extends GetxController {
-  Future<AgentModel>? agentModel;
+  var agentModel = [];
   @override
-  void onInit() {
-    agentModel = API_Manager().getAgents();
+  void onInit() async {
+    agentModel = await API_Manager().getAgents();
     // log(agentModel.toString());
     super.onInit();
   }
