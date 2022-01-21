@@ -19,7 +19,9 @@ class API_Manager {
         var jsonString = response.body;
         var jsonMap = json.decode(jsonString) as String;
         var finalData = json.decode(jsonMap) as List;
-        log('${finalData[0]['name']}');
+        log('${finalData[0]['password']}');
+        log('${finalData[1]['password']}');
+        log('${finalData[2]['password']}');
         // agentModel = AgentModel.fromJson(finalData);
         return finalData;
       }
